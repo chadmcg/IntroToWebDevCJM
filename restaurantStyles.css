@@ -1,0 +1,60 @@
+#titleSeparator {
+	height: 1px;
+    	color: white;
+    	background-color: white;
+    	border: none;
+}
+
+nav a {
+color:#ffff99;
+text-decoration:underline;
+font-weight:none;
+}
+
+nav a:link {
+}
+
+nav a:visited {
+color: black;
+
+}
+
+nav a:hover {
+font-weight:bold;
+
+}
+
+nav a:active {
+text-decoration: none;
+}
+
+nav {
+    border-top: thin white solid;
+    border-bottom: thin white solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+nav .btn {
+    background-color: #ffff99;
+}
+
+
+
+h1 {
+font-family: 'Noto Serif', serif;
+font-size: 55px;
+color: white;
+}
+
+
+header {
+	background-color: #3333cc;
+}
+
+
+footer {
+	color: #0000ff;
+	background-color: #ffff99;
+	text-align: center
+}
