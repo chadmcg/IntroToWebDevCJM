@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!--Contact page for the restaurant site-->
+
+<html>
+	<head>
+        	<meta charset="utf-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        	<title>Cafe Gloria - Contact Us</title>
+
+      		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+		
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap" rel="stylesheet">
+		
+		<style>
+			body{
+			background-color: #99ccff
+			}		
+		</style>
+
+	</head>
+	<body>
+		<div class="container-fluid">
+
+		<noscript>
+			<b><p style="color: red">Javascript is not currently enabled. This website works best viewed with Javascript enabled.</p></b>
+		</noscript>
+
+		<div id="infoCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+    					<div class="carousel-item active">
+      						We're opening a new location!
+    					</div>
+   	 				<div class="carousel-item">
+      						We're rolling out our seasonal menu, with special options for this season
+    					</div>
+    					<div class="carousel-item">
+      						The Drink of the Month is SG Special Brew
+    					</div>
+  				</div>
+			</div>
+
+			<header>
+				<div style="color: #ffff99" >Contact Us</div>
+				<hr id="titleSeparator">
+				<h1 style="text-align: center;">Cafe Gloria</h1>
+			
+				<nav>
+					<a class="btn badge-pill" href="Index.html">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"/></svg> Home
+					</a>
+					<a class="btn badge-pill" href="Menu.html">Menu</a>
+					<a class="btn badge-pill" href="Contact.html">Contact</a>
+				</nav>
+				
+			</header>
+
+		<form name = "restContact">
+  			<div class="form-group">
+    					<label for="nameInput"><b>Name:</b></label>
+					<input type="text" class="form-control" id="nameInput">
+   			</div>
+			
+			<div class="form-group">
+    					<label for="emailInput"><b>Email:</b></label>
+					<input type="email" class="form-control" id="emailInput">
+   			</div>
+			<div class="form-group">
+    					<label for="phoneInput"><b>Phone:</b></label>
+					<input type="text" class="form-control" id="phoneInput">
+   			</div>
+			<div class="form-group">
+    					<label for="inquiryReasonInput"><b>Reason for Inquiry:</b></label>
+					<select class="form-control" id="inquiryReasonInput">
+      						<option>Catering</option>
+      						<option>Private Party</option>
+      						<option>Feedback</option>
+     						<option>Other</option>
+    					</select>
+   			</div>
+			<div class="form-group">
+    					<label for="additionalInfoInput"><b>Additional Info:</b></label>
+    					<textarea class="form-control" id="additionalInfoInput" rows="4"></textarea>
+  			</div>
+			<div class="form-group">
+				<b>Have you been to the restaurant?</b>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="visitedYN" id="inlineRadio1" value="No" checked="checked">
+ 					<label class="form-check-label" for="inlineRadio1">No</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="visitedYN" id="inlineRadio2" value="Yes">
+  					<label class="form-check-label" for="inlineRadio2">Yes</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<b>Best days to contact you?</b>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" name="bestDays" id="inlineCheck1" value="M">
+ 					<label class="form-check-label" for="inlineRadio1">M</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" name="bestDays" id="inlineCheck2" value="T">
+ 					<label class="form-check-label" for="inlineRadio1">T</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" name="bestDays" id="inlineCheck3" value="W">
+ 					<label class="form-check-label" for="inlineRadio1">W</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" name="bestDays" id="inlineCheck4" value="R">
+ 					<label class="form-check-label" for="inlineRadio1">R</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="checkbox" name="bestDays" id="inlineCheck5" value="F">
+ 					<label class="form-check-label" for="inlineRadio1">F</label>
+				</div>
+			</div>
+
+		</form>
+
+		<button id="submitForm">Send Request</button>
+		
+		<p></p>
+
+		<footer>
+				<b>2 MacInnis St - St Louis, MO - 63101</b>
+				<br>314-213-6495
+		</footer>
+
+		<script>
+			document.getElementById("submitForm").onclick = function() {formCheck()};
+			function formCheck() {
+
+				var nameInput = document.forms["restContact"]["nameInput"].value;
+				var emailInput = document.forms["restContact"]["emailInput"].value;
+				var phoneInput = document.forms["restContact"]["phoneInput"].value;
+				var inquiryReasonInput = document.forms["restContact"]["inquiryReasonInput"].value;
+				var additionalInfoInput = document.forms["restContact"]["additionalInfoInput"].value;
+				var inlineCheck1 = document.forms["restContact"]["inlineCheck1"].checked;
+				var inlineCheck2 = document.forms["restContact"]["inlineCheck2"].checked;
+				var inlineCheck3 = document.forms["restContact"]["inlineCheck3"].checked;
+				var inlineCheck4 = document.forms["restContact"]["inlineCheck4"].checked;
+				var inlineCheck5 = document.forms["restContact"]["inlineCheck5"].checked;
+
+				if(nameInput=="" || emailInput==""|| phoneInput==""||inquiryReasonInput=="" || additionalInfoInput=="" || (inlineCheck1 ==false && inlineCheck2 ==false && inlineCheck3 ==false && inlineCheck4 ==false && inlineCheck5 ==false)) {
+  					window.alert("The form is missing information");
+					
+					}
+				else{
+					window.alert("Data has been provided for all fields--thank you!");
+
+					}
+				}
+			
+		</script>
+
+		</div>
+
+        	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>
